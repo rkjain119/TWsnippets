@@ -1,88 +1,88 @@
 import * as vscode from 'vscode'
 
 export class CustomSidebarViewProvider implements vscode.WebviewViewProvider {
-  public static readonly viewType = 'vscodeSidebar.openview'
+	public static readonly viewType = 'vscodeSidebar.openview'
 
-  private _view?: any
+	private _view?: any
 
-  constructor(private readonly _extensionUri: vscode.Uri) {}
+	constructor(private readonly _extensionUri: vscode.Uri) {}
 
-  private activateMessageListener() {
-    this._view.webview.onDidReceiveMessage(
-      (message: {
-        action: any
-        data: { message: string }
-        command: any
-        message: string
-      }) => {
-        switch (message.action) {
-          case 'SHOW_WARNING_LOG':
-            vscode.window.showWarningMessage(message.data.message)
-            break
-          case 'TEST':
-            vscode.window.showInformationMessage(message.data.message)
-            break
-          default:
-            break
-        }
+	private activateMessageListener() {
+		this._view.webview.onDidReceiveMessage(
+			(message: {
+				action: any
+				data: { message: string }
+				command: any
+				message: string
+			}) => {
+				switch (message.action) {
+					case 'SHOW_WARNING_LOG':
+						vscode.window.showWarningMessage(message.data.message)
+						break
+					case 'TEST':
+						vscode.window.showInformationMessage(message.data.message)
+						break
+					default:
+						break
+				}
 
-        switch (message.command) {
-          case 'INSERT':
-            console.log(message)
-            const editor = vscode.window.activeTextEditor
-            if (editor) {
-              const document = editor.document
-              const pos = editor.selection.active
+				switch (message.command) {
+					case 'INSERT':
+						console.log(message)
+						const editor = vscode.window.activeTextEditor
+						if (editor) {
+							const document = editor.document
+							const pos = editor.selection.active
 
-              editor.edit(editBuilder => {
-                editBuilder.insert(pos, message.message)
-              })
-            }
-            break
-          default:
-            break
-        }
-      }
-    )
-  }
-  resolveWebviewView(
-    webviewView: vscode.WebviewView,
-    context: vscode.WebviewViewResolveContext<unknown>,
-    token: vscode.CancellationToken
-  ): void | Thenable<void> {
-    this._view = webviewView
-    this.activateMessageListener()
+							editor.edit(editBuilder => {
+								editBuilder.insert(pos, message.message)
+							})
+						}
+						break
+					default:
+						break
+				}
+			}
+		)
+	}
+	resolveWebviewView(
+		webviewView: vscode.WebviewView,
+		context: vscode.WebviewViewResolveContext<unknown>,
+		token: vscode.CancellationToken
+	): void | Thenable<void> {
+		this._view = webviewView
+		this.activateMessageListener()
 
-    webviewView.webview.options = {
-      // Allow scripts in the webview
-      enableScripts: true,
-      localResourceRoots: [this._extensionUri],
-    }
-    webviewView.webview.html = this.getHtmlContent(webviewView.webview)
-  }
+		webviewView.webview.options = {
+			// Allow scripts in the webview
+			enableScripts: true,
+			localResourceRoots: [this._extensionUri],
+		}
+		webviewView.webview.html = this.getHtmlContent(webviewView.webview)
+	}
 
-  private getHtmlContent(webview: vscode.Webview): string {
-    // Get the local path to main script run in the webview,
-    // then convert it to a uri we can use in the webview.
-    const scriptUri = webview.asWebviewUri(
-      vscode.Uri.joinPath(this._extensionUri, 'assets', 'main.js')
-    )
+	private getHtmlContent(webview: vscode.Webview): string {
+		// Get the local path to main script run in the webview,
+		// then convert it to a uri we can use in the webview.
+		const scriptUri = webview.asWebviewUri(
+			vscode.Uri.joinPath(this._extensionUri, 'assets', 'main.js')
+		)
 
-    const styleResetUri = webview.asWebviewUri(
-      vscode.Uri.joinPath(this._extensionUri, 'assets', 'reset.css')
-    )
-    const styleVSCodeUri = webview.asWebviewUri(
-      vscode.Uri.joinPath(this._extensionUri, 'assets', 'vscode.css')
-    )
+		const styleResetUri = webview.asWebviewUri(
+			vscode.Uri.joinPath(this._extensionUri, 'assets', 'reset.css')
+		)
+		const styleVSCodeUri = webview.asWebviewUri(
+			vscode.Uri.joinPath(this._extensionUri, 'assets', 'vscode.css')
+		)
 
-    // Same for stylesheet
-    const stylesheetUri = webview.asWebviewUri(
-      vscode.Uri.joinPath(this._extensionUri, 'assets', 'main.css')
-    )
-    // Use a nonce to only allow a specific script to be run.
-    const nonce = getNonce()
+		// Same for stylesheet
+		const stylesheetUri = webview.asWebviewUri(
+			vscode.Uri.joinPath(this._extensionUri, 'assets', 'main.css')
+		)
+		// Use a nonce to only allow a specific script to be run.
+		const nonce = getNonce()
 
-    return `<!DOCTYPE html>
+		return `<!DOCTYPE html>
 	<html lang="en">
 
 	<head>
@@ -111,15 +111,15 @@ export class CustomSidebarViewProvider implements vscode.WebviewViewProvider {
 
 	</html>
 	`
-  }
+	}
 }
 
 function getNonce() {
-  let text = ''
-  const possible =
-    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-  for (let i = 0; i < 32; i++) {
-    text += possible.charAt(Math.floor(Math.random() * possible.length))
-  }
-  return text
+	let text = ''
+	const possible =
+		'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+	for (let i = 0; i < 32; i++) {
+		text += possible.charAt(Math.floor(Math.random() * possible.length))
+	}
+	return text
 }

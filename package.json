@@ -36,32 +36,17 @@
 				{
 					"type": "webview",
 					"id": "vscodeSidebar.openview",
-					"name": "View",
-					"contextualTitle": "View"
+					"name": "TWsnippets",
+					"contextualTitle": "TWsnippets"
 				}
 			]
 		},
 		"commands": [
 			{
 				"command": "vscodeSidebar.openview",
-				"title": "Sidebar View"
-			},
-			{
-				"command": "vscodeSidebar.menu.view",
-				"category": "vscode-extension-sidebar-html",
-				"title": "Sample WebView in VS Code Sidebar",
-				"icon": "$(clear-all)"
+				"title": "open TWsnippets"
 			}
-		],
-		"menus": {
-			"view/title": [
-				{
-					"command": "vscodeSidebar.menu.view",
-					"group": "navigation",
-					"when": "view == vscodeSidebar.openview"
-				}
-			]
-		}
+		]
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
