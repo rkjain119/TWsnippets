@@ -98,10 +98,10 @@ export class CustomSidebarViewProvider implements vscode.WebviewViewProvider {
 	</head>
 
 	<body>
-	<select id="dropdown">
+	<div id="search">
+		<input type="text" id="search-input" placeholder="Search" />
 
-	</select>
-
+	</div>
 		<section id="container" class="container">
 
 		</section>
