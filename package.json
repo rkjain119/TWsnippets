@@ -22,11 +22,18 @@
 	],
 	"main": "./out/extension.js",
 	"contributes": {
+		"keybindings": [
+			{
+				"command": "vscodeSidebar.openview",
+				"key": "alt+shift+t",
+				"mac": "alt+shift+t"
+			}
+		],
 		"viewsContainers": {
 			"activitybar": [
 				{
 					"id": "custom-activitybar",
-					"title": "VSCode Extension",
+					"title": "Tailwind Snippets",
 					"icon": "assets/logo.svg"
 				}
 			]
