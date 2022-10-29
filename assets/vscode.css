@@ -77,9 +77,13 @@ input:not([type='checkbox']),
 textarea {
 	display: block;
 	width: 100%;
-	border: 1px solid white;
+	height: 2.5rem;
+	border: 1px solid var(--vscode-focusBorder);
+	border-radius: 0.5rem;
 	font-family: var(--vscode-font-family);
-	padding: var(--input-padding-vertical) var(--input-padding-horizontal);
+	font-size: 1rem;
+	padding: 0.5rem;
+	margin-bottom: 1.5rem;
 	color: var(--vscode-input-foreground);
 	outline-color: var(--vscode-input-border);
 	background-color: var(--vscode-input-background);

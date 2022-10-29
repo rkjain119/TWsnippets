@@ -2,9 +2,7 @@ import * as vscode from 'vscode'
 
 export class CustomSidebarViewProvider implements vscode.WebviewViewProvider {
 	public static readonly viewType = 'vscodeSidebar.openview'
-
 	private _view?: any
-
 	constructor(private readonly _extensionUri: vscode.Uri) {}
 
 	private activateMessageListener() {
@@ -15,23 +13,10 @@ export class CustomSidebarViewProvider implements vscode.WebviewViewProvider {
 				command: any
 				message: string
 			}) => {
-				switch (message.action) {
-					case 'SHOW_WARNING_LOG':
-						vscode.window.showWarningMessage(message.data.message)
-						break
-					case 'TEST':
-						vscode.window.showInformationMessage(message.data.message)
-						break
-					default:
-						break
-				}
-
 				switch (message.command) {
 					case 'INSERT':
-						console.log(message)
 						const editor = vscode.window.activeTextEditor
 						if (editor) {
-							const document = editor.document
 							const pos = editor.selection.active
 
 							editor.edit(editBuilder => {
@@ -45,11 +30,7 @@ export class CustomSidebarViewProvider implements vscode.WebviewViewProvider {
 			}
 		)
 	}
-	resolveWebviewView(
-		webviewView: vscode.WebviewView,
-		context: vscode.WebviewViewResolveContext<unknown>,
-		token: vscode.CancellationToken
-	): void | Thenable<void> {
+	resolveWebviewView(webviewView: vscode.WebviewView): void | Thenable<void> {
 		this._view = webviewView
 		this.activateMessageListener()
 
@@ -82,35 +63,28 @@ export class CustomSidebarViewProvider implements vscode.WebviewViewProvider {
 		// Use a nonce to only allow a specific script to be run.
 		const nonce = getNonce()
 
-		return `<!DOCTYPE html>
-	<html lang="en">
+		return `
+		<!DOCTYPE html>
+		<html lang="en">
+			<head>
+				<meta charset="UTF-8" />
+				<meta style-src ${webview.cspSource}; script-src 'nonce-${nonce}' ;">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				<link href="${styleResetUri}" rel="stylesheet" />
+				<link href="${styleVSCodeUri}" rel="stylesheet" />
+				<link href="${stylesheetUri}" rel="stylesheet" />
+			</head>
 
-	<head>
-		<meta charset="UTF-8">
-		<meta style-src ${webview.cspSource}; script-src 'nonce-${nonce}' ;">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<body>
+				<section class="container">
+					<input type="text" class="search-box" id="search" placeholder="Search" />
+					<section id="content" class="content"></section>
+				</section>
 
-		<link href="${styleResetUri}" rel="stylesheet">
-		<link href="${styleVSCodeUri}" rel="stylesheet">
-
-		<link href="${stylesheetUri}" rel="stylesheet">
-
-	</head>
-
-	<body>
-	<div id="search">
-		<input type="text" id="search-input" placeholder="Search" />
-
-	</div>
-		<section id="container" class="container">
-
-		</section>
-		<script nonce="${nonce}" src="${scriptUri}"></script>
-
-	</body>
-
-	</html>
-	`
+				<script nonce="${nonce}" src="${scriptUri}"></script>
+			</body>
+		</html>
+		`
 	}
 }
 
