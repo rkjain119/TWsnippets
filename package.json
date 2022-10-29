@@ -1,20 +1,20 @@
 {
-	"name": "vscode-extension-sidebar-html",
-	"displayName": "Sidebar Html VS Code Extension",
-	"description": "Sidebar Html VS Code Extension",
-	"version": "1.0.0",
-	"publisher": "vscode-extension-webview",
-	"homepage": "https://github.com/KumarVariable/vscode-extension-sidebar-html/blob/afded57b2b4e13a002774b0d2d965b0a9024e83d/README.md",
-	"license": "BSD-3-Clause",
+	"name": "sudopers-twsnippets",
+	"displayName": "TW Snippets",
+	"description": "fast track your Tailwind development with snippets ",
+	"version": "0.0.1",
+	"publisher": "sudopers",
+	"homepage": "https://github.com/rkjain119/TWsnippets#readme",
+	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/KumarVariable/vscode-extension-sidebar-html.git"
+		"url": "https://github.com/rkjain119/TWsnippets.git"
 	},
 	"engines": {
-		"vscode": "^1.61.0"
+		"vscode": "^1.71.0"
 	},
 	"categories": [
-		"Other"
+		"Snippets"
 	],
 	"activationEvents": [
 		"onCommand:vscodeSidebar.openview",
@@ -27,7 +27,7 @@
 				{
 					"id": "custom-activitybar",
 					"title": "VSCode Extension",
-					"icon": "assets/logo_bito.svg"
+					"icon": "assets/logo.svg"
 				}
 			]
 		},
