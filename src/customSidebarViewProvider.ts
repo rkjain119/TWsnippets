@@ -34,9 +34,6 @@ export class CustomSidebarViewProvider implements vscode.WebviewViewProvider {
               const document = editor.document
               const pos = editor.selection.active
 
-              // Get the word within the selection
-              // const word = document.getText(selection);
-              // const reversed = word.split("").reverse().join("");
               editor.edit(editBuilder => {
                 editBuilder.insert(pos, message.message)
               })
