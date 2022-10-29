@@ -179,13 +179,13 @@ function renderComponent(components) {
 
 	Object.keys(components).forEach(category => {
 		const categoryContainer = document.createElement('ul')
+		container.append(categoryContainer)
+
 		const categoryTitle = document.createElement('h3')
 		categoryTitle.innerText = category
 		categoryTitle.className = 'category-title'
-		categoryContainer.appendChild(categoryTitle)
-		// categoryContainer.className = ''
 
-		container.append(categoryContainer)
+		categoryContainer.appendChild(categoryTitle)
 
 		components[category].map(component => {
 			const div = document.createElement('li')
@@ -209,7 +209,7 @@ function renderComponent(components) {
 				})
 			})
 
-			categoryTitle.append(div)
+			categoryContainer.append(div)
 		})
 	})
 }
