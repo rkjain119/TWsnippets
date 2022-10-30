@@ -1,26 +1,12 @@
-# Sample Visual Studio Extension Using WebView View
+# TW Snippets
 
-## Features
-
-Visual Studio Code Sample extension developed to showcase WebView views using WebView API.This extension will be displayed
-in activity bar of VS Code editor, the Sidebar of VS Code editor will have one view loaded with custom UI (Html)
-
-## Requirements
-
-No requirements to build tis project. Clone from GIT and do npm install
+**TW Snippets** is a Visual Studio code extension that allows you to insert code snippets with a single click. Its goal is to accelerate the developer workflow by making it simple to add pre-built UI components without leaving VS code. Support for ReactJs is currently available, with NextJs and HTML support on the way..
 
 
-## Release Notes
+## Less Code. More Productivity.
+TW Snippets eliminates the time-consuming process of creating a component from start, allowing developers to focus on their projects.
+![enter image description here](https://res.cloudinary.com/dyl08vtii/image/upload/v1667116906/tws/readme.png)
 
-Sample extension
+> A slew of new snippets will be released very shortly.
 
-### 1.0.0
-
-Initial release
-
------------------------------------------------------------------------------------------------------------
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+[Github](https://github.com/rkjain119/TWsnippets)
