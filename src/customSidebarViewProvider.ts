@@ -1,5 +1,13 @@
 import * as vscode from 'vscode'
 
+async function openWindow(content: string) {
+	const document = await vscode.workspace.openTextDocument({
+		content,
+		language: 'javascriptreact',
+	})
+	vscode.window.showTextDocument(document)
+}
+
 export class CustomSidebarViewProvider implements vscode.WebviewViewProvider {
 	public static readonly viewType = 'vscodeSidebar.openview'
 	private _view?: any
@@ -16,12 +24,14 @@ export class CustomSidebarViewProvider implements vscode.WebviewViewProvider {
 				switch (message.command) {
 					case 'INSERT':
 						const editor = vscode.window.activeTextEditor
-						if (editor) {
+						if (editor != undefined) {
 							const pos = editor.selection.active
 
 							editor.edit(editBuilder => {
-								editBuilder.insert(pos, message.message)
+								editBuilder.insert(pos, message.data.message)
 							})
+						} else {
+							openWindow(message.data.message)
 						}
 						break
 					default:
