@@ -1,100 +1,100 @@
 const components = {
-	Button: [
-		{
-			id: 1,
-			category: 'button',
-			name: 'button-primary-small',
-			preview:
-				'https://res.cloudinary.com/dyl08vtii/image/upload/v1667059900/tws/buttons.01-primary-buttons.png',
-			jsx: '<button type="button" className="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Button text </button>',
-		},
-		{
-			id: 2,
-			category: 'button',
-			name: 'button-primary-medium',
-			preview:
-				'https://res.cloudinary.com/dyl08vtii/image/upload/v1667067003/tws/buttons.01-primary-small.png',
-			jsx: '<button type="button" className="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Button text </button>',
-		},
-		{
-			id: 3,
-			category: 'button',
-			name: 'button-primary-base',
-			preview:
-				'https://res.cloudinary.com/dyl08vtii/image/upload/v1667067127/tws/buttons.01-primary-medium.png',
-			jsx: '<button type="button" className="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Button text </button>',
-		},
-		{
-			id: 4,
-			category: 'button',
-			name: 'button-primary-large',
-			preview:
-				'https://res.cloudinary.com/dyl08vtii/image/upload/v1667067224/tws/buttons.01-primary-large.png',
-			jsx: '<button type="button" className="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Button text </button>',
-		},
-	],
-	Input: [
-		{
-			id: 3,
-			category: 'input',
-			name: 'input-primary-base',
-			preview:
-				'https://tailwindui.com/img/components/buttons.01-primary-buttons-xl.png',
-			jsx: '<button type="button" className="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Button text </button>',
-		},
-		{
-			id: 4,
-			category: 'input',
-			name: 'input-primary-large',
-			preview:
-				'https://tailwindui.com/img/components/buttons.01-primary-buttons-xl.png',
-			jsx: '<button type="button" className="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Button text </button>',
-		},
-	],
-	404: [
-		{
-			id: 5,
-			category: '404',
-			name: '404-simple',
-			preview:
-				'https://res.cloudinary.com/dyl08vtii/image/upload/v1667067224/tws/buttons.01-primary-large.png',
-			jsx: 'export default function 404() {\n  return (\n    <>\n\n      <div className="bg-white min-h-full px-4 py-16 sm:px-6 sm:py-24 md:grid md:place-items-center lg:px-8">\n        <div className="max-w-max mx-auto">\n          <main className="sm:flex">\n            <p className="text-4xl font-extrabold text-indigo-600 sm:text-5xl">404</p>\n            <div className="sm:ml-6">\n              <div className="sm:border-l sm:border-gray-200 sm:pl-6">\n                <h1 className="text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl">Page not found</h1>\n                <p className="mt-1 text-base text-gray-500">Please check the URL in the address bar and try again.</p>\n              </div>\n              <div className="mt-10 flex space-x-3 sm:border-l sm:border-transparent sm:pl-6">\n                <a\n                  href="#"\n                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"\n                >\n                  Go back home\n                </a>\n                <a\n                  href="#"\n                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"\n                >\n                  Contact support\n                </a>\n              </div>\n            </div>\n          </main>\n        </div>\n      </div>\n    </>\n  )\n}\n',
-		},
-		{
-			id: 6,
-			category: '404',
-			name: '404-split-image',
-			preview:
-				'https://res.cloudinary.com/dyl08vtii/image/upload/v1667067224/tws/buttons.01-primary-large.png',
-			jsx: 'export default function 404() {\n  return (\n    <>\n      <div className="bg-white min-h-full flex flex-col lg:relative">\n        <div className="flex-grow flex flex-col">\n          <main className="flex-grow flex flex-col bg-white">\n            <div className="flex-grow mx-auto max-w-7xl w-full flex flex-col px-4 sm:px-6 lg:px-8">\n              <div className="flex-shrink-0 pt-10 sm:pt-16">\n                <a href="/" className="inline-flex">\n                  <span className="sr-only">twsnippet</span>\n                  <img\n                    className="h-12 w-auto"\n                    src="https://res.cloudinary.com/dyl08vtii/image/upload/v1667068703/tws/logo_byv4mp.svg"\n                    alt=""\n                  />\n                </a>\n              </div>\n              <div className="flex-shrink-0 my-auto py-16 sm:py-32">\n                <p className="text-sm font-semibold text-indigo-600 uppercase tracking-wide">404 error</p>\n                <h1 className="mt-2 text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl">\n                  Page not found\n                </h1>\n                <p className="mt-2 text-base text-gray-500">Sorry, we couldn’t find the page you’re looking for.</p>\n                <div className="mt-6">\n                  <a href="#" className="text-base font-medium text-indigo-600 hover:text-indigo-500">\n                    Go back home<span aria-hidden="true"> &rarr;</span>\n                  </a>\n                </div>\n              </div>\n            </div>\n          </main>\n          <footer className="flex-shrink-0 bg-gray-50">\n            <div className="mx-auto max-w-7xl w-full px-4 py-16 sm:px-6 lg:px-8">\n              <nav className="flex space-x-4">\n                <a href="#" className="text-sm font-medium text-gray-500 hover:text-gray-600">\n                  Contact Support\n                </a>\n                <span className="inline-block border-l border-gray-300" aria-hidden="true" />\n                <a href="#" className="text-sm font-medium text-gray-500 hover:text-gray-600">\n                  Status\n                </a>\n                <span className="inline-block border-l border-gray-300" aria-hidden="true" />\n                <a href="#" className="text-sm font-medium text-gray-500 hover:text-gray-600">\n                  Twitter\n                </a>\n              </nav>\n            </div>\n          </footer>\n        </div>\n        <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">\n          <img\n            className="absolute inset-0 h-full w-full object-cover"\n            src="https://images.unsplash.com/photo-1600304594992-98c1262b0889?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80"\n            alt=""\n          />\n        </div>\n      </div>\n    </>\n  )\n}\n',
-		},
-		{
-			id: 7,
-			category: '404',
-			name: '404-simple-logo',
-			preview:
-				'https://res.cloudinary.com/dyl08vtii/image/upload/v1667067224/tws/buttons.01-primary-large.png',
-			jsx: 'export default function 404Logo() {\n  return (\n    <>\n      <div className="min-h-full pt-16 pb-12 flex flex-col bg-white">\n        <main className="flex-grow flex flex-col justify-center max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">\n          <div className="flex-shrink-0 flex justify-center">\n            <a href="/" className="inline-flex">\n              <span className="sr-only">Workflow</span>\n              <img\n                className="h-12 w-auto"\n                src="https://res.cloudinary.com/dyl08vtii/image/upload/v1667068703/tws/logo_byv4mp.svg"\n                alt=""\n              />\n            </a>\n          </div>\n          <div className="py-16">\n            <div className="text-center">\n              <p className="text-sm font-semibold text-indigo-600 uppercase tracking-wide">404 error</p>\n              <h1 className="mt-2 text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl">Page not found.</h1>\n              <p className="mt-2 text-base text-gray-500">Sorry, we couldn’t find the page you’re looking for.</p>\n              <div className="mt-6">\n                <a href="#" className="text-base font-medium text-indigo-600 hover:text-indigo-500">\n                  Go back home<span aria-hidden="true"> &rarr;</span>\n                </a>\n              </div>\n            </div>\n          </div>\n        </main>\n        <footer className="flex-shrink-0 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">\n          <nav className="flex justify-center space-x-4">\n            <a href="#" className="text-sm font-medium text-gray-500 hover:text-gray-600">\n              Contact Support\n            </a>\n            <span className="inline-block border-l border-gray-300" aria-hidden="true" />\n            <a href="#" className="text-sm font-medium text-gray-500 hover:text-gray-600">\n              Status\n            </a>\n            <span className="inline-block border-l border-gray-300" aria-hidden="true" />\n            <a href="#" className="text-sm font-medium text-gray-500 hover:text-gray-600">\n              Twitter\n            </a>\n          </nav>\n        </footer>\n      </div>\n    </>\n  )\n}\n',
-		},
-	],
-	Header: [
-		{
-			id: 8,
-			category: 'Header',
-			name: 'Header-simple-centered',
-			preview:
-				'https://res.cloudinary.com/dyl08vtii/image/upload/v1667067224/tws/buttons.01-primary-large.png',
-			jsx: 'export default function Header() {\n  return (\n    <div className="bg-white">\n      <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">\n        <div className="text-center">\n          <h2 className="text-base font-semibold text-indigo-600 tracking-wide uppercase">Pricing</h2>\n          <p className="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">\n            Take control of your team.\n          </p>\n          <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500">\n            Start building for free, then add a site plan to go live. Account plans unlock additional features.\n          </p>\n        </div>\n      </div>\n    </div>\n  )\n}\n',
-		},
-		{
-			id: 9,
-			category: 'Header',
-			name: 'Header-simple-background',
-			preview:
-				'https://res.cloudinary.com/dyl08vtii/image/upload/v1667067224/tws/buttons.01-primary-large.png',
-			jsx: '"export default function Header() {\n  return (\n    <div className="relative bg-indigo-800">\n      <div className="absolute inset-0">\n        <img\n          className="w-full h-full object-cover"\n          src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&&sat=-100"\n          alt=""\n        />\n        <div className="absolute inset-0 bg-indigo-800 mix-blend-multiply" aria-hidden="true" />\n      </div>\n      <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">\n        <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">Get in touch</h1>\n        <p className="mt-6 text-xl text-indigo-100 max-w-3xl">\n          Mattis amet hendrerit dolor, quisque lorem pharetra. Pellentesque lacus nisi urna, arcu sociis eu. Orci vel\n          lectus nisl eget eget ut consectetur. Sit justo viverra non adipisicing elit distinctio.\n        </p>\n      </div>\n    </div>\n  )\n}\n"	',
-		},
-	],
+	// Button: [
+	// 	{
+	// 		id: 1,
+	// 		category: 'button',
+	// 		name: 'button-primary-small',
+	// 		preview:
+	// 			'https://res.cloudinary.com/dyl08vtii/image/upload/v1667059900/tws/buttons.01-primary-buttons.png',
+	// 		jsx: '<button type="button" className="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Button text </button>',
+	// 	},
+	// 	{
+	// 		id: 2,
+	// 		category: 'button',
+	// 		name: 'button-primary-medium',
+	// 		preview:
+	// 			'https://res.cloudinary.com/dyl08vtii/image/upload/v1667067003/tws/buttons.01-primary-small.png',
+	// 		jsx: '<button type="button" className="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Button text </button>',
+	// 	},
+	// 	{
+	// 		id: 3,
+	// 		category: 'button',
+	// 		name: 'button-primary-base',
+	// 		preview:
+	// 			'https://res.cloudinary.com/dyl08vtii/image/upload/v1667067127/tws/buttons.01-primary-medium.png',
+	// 		jsx: '<button type="button" className="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Button text </button>',
+	// 	},
+	// 	{
+	// 		id: 4,
+	// 		category: 'button',
+	// 		name: 'button-primary-large',
+	// 		preview:
+	// 			'https://res.cloudinary.com/dyl08vtii/image/upload/v1667067224/tws/buttons.01-primary-large.png',
+	// 		jsx: '<button type="button" className="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Button text </button>',
+	// 	},
+	// ],
+	// Input: [
+	// 	{
+	// 		id: 3,
+	// 		category: 'input',
+	// 		name: 'input-primary-base',
+	// 		preview:
+	// 			'https://tailwindui.com/img/components/buttons.01-primary-buttons-xl.png',
+	// 		jsx: '<button type="button" className="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Button text </button>',
+	// 	},
+	// 	{
+	// 		id: 4,
+	// 		category: 'input',
+	// 		name: 'input-primary-large',
+	// 		preview:
+	// 			'https://tailwindui.com/img/components/buttons.01-primary-buttons-xl.png',
+	// 		jsx: '<button type="button" className="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Button text </button>',
+	// 	},
+	// ],
+	// 404: [
+	// 	{
+	// 		id: 5,
+	// 		category: '404',
+	// 		name: '404-simple',
+	// 		preview:
+	// 			'https://res.cloudinary.com/dyl08vtii/image/upload/v1667067224/tws/buttons.01-primary-large.png',
+	// 		jsx: 'export default function 404() {\n  return (\n    <>\n\n      <div className="bg-white min-h-full px-4 py-16 sm:px-6 sm:py-24 md:grid md:place-items-center lg:px-8">\n        <div className="max-w-max mx-auto">\n          <main className="sm:flex">\n            <p className="text-4xl font-extrabold text-indigo-600 sm:text-5xl">404</p>\n            <div className="sm:ml-6">\n              <div className="sm:border-l sm:border-gray-200 sm:pl-6">\n                <h1 className="text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl">Page not found</h1>\n                <p className="mt-1 text-base text-gray-500">Please check the URL in the address bar and try again.</p>\n              </div>\n              <div className="mt-10 flex space-x-3 sm:border-l sm:border-transparent sm:pl-6">\n                <a\n                  href="#"\n                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"\n                >\n                  Go back home\n                </a>\n                <a\n                  href="#"\n                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"\n                >\n                  Contact support\n                </a>\n              </div>\n            </div>\n          </main>\n        </div>\n      </div>\n    </>\n  )\n}\n',
+	// 	},
+	// 	{
+	// 		id: 6,
+	// 		category: '404',
+	// 		name: '404-split-image',
+	// 		preview:
+	// 			'https://res.cloudinary.com/dyl08vtii/image/upload/v1667067224/tws/buttons.01-primary-large.png',
+	// 		jsx: 'export default function 404() {\n  return (\n    <>\n      <div className="bg-white min-h-full flex flex-col lg:relative">\n        <div className="flex-grow flex flex-col">\n          <main className="flex-grow flex flex-col bg-white">\n            <div className="flex-grow mx-auto max-w-7xl w-full flex flex-col px-4 sm:px-6 lg:px-8">\n              <div className="flex-shrink-0 pt-10 sm:pt-16">\n                <a href="/" className="inline-flex">\n                  <span className="sr-only">twsnippet</span>\n                  <img\n                    className="h-12 w-auto"\n                    src="https://res.cloudinary.com/dyl08vtii/image/upload/v1667068703/tws/logo_byv4mp.svg"\n                    alt=""\n                  />\n                </a>\n              </div>\n              <div className="flex-shrink-0 my-auto py-16 sm:py-32">\n                <p className="text-sm font-semibold text-indigo-600 uppercase tracking-wide">404 error</p>\n                <h1 className="mt-2 text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl">\n                  Page not found\n                </h1>\n                <p className="mt-2 text-base text-gray-500">Sorry, we couldn’t find the page you’re looking for.</p>\n                <div className="mt-6">\n                  <a href="#" className="text-base font-medium text-indigo-600 hover:text-indigo-500">\n                    Go back home<span aria-hidden="true"> &rarr;</span>\n                  </a>\n                </div>\n              </div>\n            </div>\n          </main>\n          <footer className="flex-shrink-0 bg-gray-50">\n            <div className="mx-auto max-w-7xl w-full px-4 py-16 sm:px-6 lg:px-8">\n              <nav className="flex space-x-4">\n                <a href="#" className="text-sm font-medium text-gray-500 hover:text-gray-600">\n                  Contact Support\n                </a>\n                <span className="inline-block border-l border-gray-300" aria-hidden="true" />\n                <a href="#" className="text-sm font-medium text-gray-500 hover:text-gray-600">\n                  Status\n                </a>\n                <span className="inline-block border-l border-gray-300" aria-hidden="true" />\n                <a href="#" className="text-sm font-medium text-gray-500 hover:text-gray-600">\n                  Twitter\n                </a>\n              </nav>\n            </div>\n          </footer>\n        </div>\n        <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">\n          <img\n            className="absolute inset-0 h-full w-full object-cover"\n            src="https://images.unsplash.com/photo-1600304594992-98c1262b0889?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80"\n            alt=""\n          />\n        </div>\n      </div>\n    </>\n  )\n}\n',
+	// 	},
+	// 	{
+	// 		id: 7,
+	// 		category: '404',
+	// 		name: '404-simple-logo',
+	// 		preview:
+	// 			'https://res.cloudinary.com/dyl08vtii/image/upload/v1667067224/tws/buttons.01-primary-large.png',
+	// 		jsx: 'export default function 404Logo() {\n  return (\n    <>\n      <div className="min-h-full pt-16 pb-12 flex flex-col bg-white">\n        <main className="flex-grow flex flex-col justify-center max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">\n          <div className="flex-shrink-0 flex justify-center">\n            <a href="/" className="inline-flex">\n              <span className="sr-only">Workflow</span>\n              <img\n                className="h-12 w-auto"\n                src="https://res.cloudinary.com/dyl08vtii/image/upload/v1667068703/tws/logo_byv4mp.svg"\n                alt=""\n              />\n            </a>\n          </div>\n          <div className="py-16">\n            <div className="text-center">\n              <p className="text-sm font-semibold text-indigo-600 uppercase tracking-wide">404 error</p>\n              <h1 className="mt-2 text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl">Page not found.</h1>\n              <p className="mt-2 text-base text-gray-500">Sorry, we couldn’t find the page you’re looking for.</p>\n              <div className="mt-6">\n                <a href="#" className="text-base font-medium text-indigo-600 hover:text-indigo-500">\n                  Go back home<span aria-hidden="true"> &rarr;</span>\n                </a>\n              </div>\n            </div>\n          </div>\n        </main>\n        <footer className="flex-shrink-0 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">\n          <nav className="flex justify-center space-x-4">\n            <a href="#" className="text-sm font-medium text-gray-500 hover:text-gray-600">\n              Contact Support\n            </a>\n            <span className="inline-block border-l border-gray-300" aria-hidden="true" />\n            <a href="#" className="text-sm font-medium text-gray-500 hover:text-gray-600">\n              Status\n            </a>\n            <span className="inline-block border-l border-gray-300" aria-hidden="true" />\n            <a href="#" className="text-sm font-medium text-gray-500 hover:text-gray-600">\n              Twitter\n            </a>\n          </nav>\n        </footer>\n      </div>\n    </>\n  )\n}\n',
+	// 	},
+	// ],
+	// Header: [
+	// 	{
+	// 		id: 8,
+	// 		category: 'Header',
+	// 		name: 'Header-simple-centered',
+	// 		preview:
+	// 			'https://res.cloudinary.com/dyl08vtii/image/upload/v1667067224/tws/buttons.01-primary-large.png',
+	// 		jsx: 'export default function Header() {\n  return (\n    <div className="bg-white">\n      <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">\n        <div className="text-center">\n          <h2 className="text-base font-semibold text-indigo-600 tracking-wide uppercase">Pricing</h2>\n          <p className="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">\n            Take control of your team.\n          </p>\n          <p className="max-w-xl mt-5 mx-auto text-xl text-gray-500">\n            Start building for free, then add a site plan to go live. Account plans unlock additional features.\n          </p>\n        </div>\n      </div>\n    </div>\n  )\n}\n',
+	// 	},
+	// 	{
+	// 		id: 9,
+	// 		category: 'Header',
+	// 		name: 'Header-simple-background',
+	// 		preview:
+	// 			'https://res.cloudinary.com/dyl08vtii/image/upload/v1667067224/tws/buttons.01-primary-large.png',
+	// 		jsx: '"export default function Header() {\n  return (\n    <div className="relative bg-indigo-800">\n      <div className="absolute inset-0">\n        <img\n          className="w-full h-full object-cover"\n          src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&&sat=-100"\n          alt=""\n        />\n        <div className="absolute inset-0 bg-indigo-800 mix-blend-multiply" aria-hidden="true" />\n      </div>\n      <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">\n        <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">Get in touch</h1>\n        <p className="mt-6 text-xl text-indigo-100 max-w-3xl">\n          Mattis amet hendrerit dolor, quisque lorem pharetra. Pellentesque lacus nisi urna, arcu sociis eu. Orci vel\n          lectus nisl eget eget ut consectetur. Sit justo viverra non adipisicing elit distinctio.\n        </p>\n      </div>\n    </div>\n  )\n}\n"	',
+	// 	},
+	// ],
 	CTA: [
 		{
 			id: 7,
