@@ -3,7 +3,7 @@
 	"displayName": "TW Snippets",
 	"description": "fast track your Tailwind development with snippets ",
 	"version": "0.1.0",
-	"icon": "icon.png",
+	"icon": "/assets/icon.png",
 	"publisher": "sudopers",
 	"homepage": "https://github.com/rkjain119/TWsnippets#readme",
 	"license": "MIT",
